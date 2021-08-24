@@ -1,3 +1,26 @@
-h1 Hello
-h1 Get
-h1 Post
+html
+    head
+        link(rel="stylesheet" href="/public/style.css" )
+    body    
+        a(href='/') Back to the main page
+        h1 Get
+        p
+          b To display 
+          a(href='/shows') all data
+          b  in the main favShows.js file:
+          br
+          | app.get('/shows', getAll)
+          br
+          | The getAll function is located in the controllers folder in a document named 'favShows.js'.
+          br
+          | const getAll = (req, res) => { return res.send(favShows)}
+          br
+          br
+          pre
+            code { title: The Vampire Diaries, 
+                    br
+                    | numberofEps: 171,}
+                    br
+                    | starring: "Nina Dobrev, Ian Somerhalder",
+                    br
+                    | favCharacter: "Bonnie",

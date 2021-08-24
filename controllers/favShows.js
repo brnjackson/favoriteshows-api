@@ -5,10 +5,10 @@ const serverSetup = (req, res) => {
     return res.render('index', { favShows })
 }
 
-const getAll = async (req, res) => {
-      const netflix = await models.FavShow.findAll()
+const getAll = (req, res) => {
 
-      return res.send(netflix)
+
+      return res.send(favShows)
       }
 
 module.exports = { serverSetup, getAll }
