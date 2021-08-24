@@ -1,0 +1,34 @@
+html
+    head
+        link(rel="stylesheet" href="/style.css")
+    body
+        center 
+        h1 Brittney's Favorite Shows
+        p Welcome to my server! I have a created my own database that showcases some of my favorite shows. Each table in the database represents show data for a different streaming service - Netflix, Hulu and Starz.
+        ul
+        li
+            a(href='/documentation/get') Get
+        li
+            a(href='/documentation/post') Post
+        li
+            a(href='/documentation/delete') Delete
+        li
+            a(href='/documentation/api') View All
+        li
+            a(href='/') Collapse
+        br
+        b POST /addnewshow
+        br
+        
+        | Description: This allows the user to add a new show based on the streaming service to the corresponding tables: Netflix, Hulu or Starz.
+        br
+        | Route: localhost:1337/addnewshow
+        br
+        | Request (Example Input):
+        br
+        code { title: "Umbrella Academy", numberofEps: 20, starring: "Elliot Page, Robert Sheehan", favCharacter: "Klaus" }
+        br
+        | Return: 
+        br
+        code const favShows = {[ all existing shows..., { title: "Umbrella Academy", numberofEps: 20, starring: "Elliot Page, Robert Sheehan", favCharacter: "Klaus" }]}
+        br

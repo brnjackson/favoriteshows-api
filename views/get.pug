@@ -13,6 +13,8 @@ html
         li
             a(href='/documentation/delete') Delete
         li
+            a(href='/documentation/api') View All
+        li
             a(href='/') Collapse
         br
         b GET /
@@ -42,26 +44,3 @@ html
         | Output:
         br
         code const favShows = { streamingService: [ name: "Netflix", shows: [{ title: "The Vampire Diaries", numberofEps: 171, starring: "Nina Dobrev, Ian Somerhalder", favCharacter: "Bonnie"} , { title: "Breaking Bad", numberofEps: 62, starring: "Bryan Cranston, Aaron Paul", favCharacter: "Jesse", ... all other shows}
-        br
-        br 
-        b POST /addnewshow
-        br
-        | Description: This allows the user to add a new show based on the streaming service to the corresponding tables: Netflix, Hulu or Starz.
-        br
-        | Route: localhost:1337/addnewshow
-        br
-        | Request (Example Input):
-        br
-        code { title: "Umbrella Academy", numberofEps: 20, starring: "Elliot Page, Robert Sheehan", favCharacter: "Klaus" }
-        br
-        | Return: 
-        br
-        code const favShows = {[ all existing shows..., { title: "Umbrella Academy", numberofEps: 20, starring: "Elliot Page, Robert Sheehan", favCharacter: "Klaus" }]}
-        br
-        br
-        b DELETE / removeshow
-        br
-        | Description: Deletes the show with the provided ID number from the database
-        br
-        | Route: localhost:1337/removeshow
-        br

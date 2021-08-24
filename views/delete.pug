@@ -1,0 +1,25 @@
+html
+    head
+        link(rel="stylesheet" href="/style.css")
+    body
+        center 
+        h1 Brittney's Favorite Shows
+        p Welcome to my server! I have a created my own database that showcases some of my favorite shows. Each table in the database represents show data for a different streaming service - Netflix, Hulu and Starz.
+        ul
+        li
+            a(href='/documentation/get') Get
+        li
+            a(href='/documentation/post') Post
+        li
+            a(href='/documentation/delete') Delete
+        li
+            a(href='/documentation/api') View All
+        li
+            a(href='/') Collapse
+        br
+        b DELETE / removeshow
+        br
+        | Description: Deletes the show with the provided ID number from the database
+        br
+        | Route: localhost:1337/removeshow
+        br

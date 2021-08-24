@@ -9,7 +9,16 @@ app.get('/', serverSetup)
 app.use(express.json())
 
 app.get('/shows', getAll)
-app.get('/api', (req,res) => {
+app.get('/documentation/get', (req, res) => {
+    return res.render('get')
+})
+app.get('/documentation/delete', (req, res) => {
+    return res.render('delete')
+})
+app.get('/documentation/post', (req, res) => {
+    return res.render('post')
+})
+app.get('/documentation/api', (req,res) => {
     return res.render('api')
 }
 )
