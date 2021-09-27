@@ -1,11 +1,12 @@
-const netflix = (connection, Sequelize) => {
-    return connection.define('starz', {
-        id: { type: Sequelize.INTEGER, autoIncrement: true, primaryKey: true },
+const Netflix = (connection, Sequelize) => {
+    return connection.define('netflixshows', {
+        id: { type: Sequelize.INTEGER, autoIncrement: true, primaryKey: true  },
         title: { type: Sequelize.STRING },
-        NumberofEps: { type: Sequelize.INTEGER },
-        Starring: { type: Sequelize.STRING },
+        numberofEps: { type: Sequelize.STRING },
+        starring: { type: Sequelize.STRING },
         favCharacter: { type: Sequelize.STRING },
-    })
+    },
+    { timestamps: false })
 }
 
-module.exports = netflix
+module.exports = Netflix
