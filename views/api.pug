@@ -44,7 +44,20 @@ html
         code const favShows = { streamingService: [ name: "Netflix", shows: [{ title: "The Vampire Diaries", numberofEps: 171, starring: "Nina Dobrev, Ian Somerhalder", favCharacter: "Bonnie"} , { title: "Breaking Bad", numberofEps: 62, starring: "Bryan Cranston, Aaron Paul", favCharacter: "Jesse", ... all other shows}
         br
         br 
-        b POST /addnewshow
+
+        b GET /shows/netflix
+        br
+        b GET /shows/hulu
+        br
+        b GET /shows/starz
+        br
+
+        br
+        b POST /shows/netflix
+        br
+        b POST /shows/hulu
+        br
+        b POST /shows/starz
         br
         | Description: This allows the user to add a new show based on the streaming service to the corresponding tables: Netflix, Hulu or Starz.
         br
@@ -59,7 +72,11 @@ html
         code const favShows = {[ all existing shows..., { title: "Umbrella Academy", numberofEps: 20, starring: "Elliot Page, Robert Sheehan", favCharacter: "Klaus" }]}
         br
         br
-        b DELETE / removeshow
+        b DELETE /shows/netflix/:id
+        br
+        b DELETE /shows/hulu/:id
+        br
+        b DELETE /shows/starz/:id
         br
         | Description: Deletes the show with the provided ID number from the database
         br

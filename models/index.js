@@ -4,7 +4,6 @@ const netflix = require('./netflix-shows')
 const hulu = require('./hulu-shows')
 const starz = require('./starz-shows')
 
-console.log(allConfig)
 
 
 const environment = process.env.NODE_ENV || 'development'

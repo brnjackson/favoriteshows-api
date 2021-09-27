@@ -1,12 +1,8 @@
 const models = require('../models')
 
-const serverSetup = (req, res) => {
-    return res.send('Welcome!')
-}
-
 const getAll = async (req, res) => {
     const hulu = await models.Hulu.findAll()
-    const netflix = await models.Hulu.findAll()
+    const netflix = await models.Netflix.findAll()
     const starz = await models.Starz.findAll()
     
     return res.send( { hulu, netflix, starz } )
@@ -47,4 +43,4 @@ const deleteHuluById = async (req, res) => {
         }
 }
 
-module.exports = { serverSetup, getHulu, getAll, newHuluShow, deleteHuluById }
+module.exports = { getHulu, getAll, newHuluShow, deleteHuluById }

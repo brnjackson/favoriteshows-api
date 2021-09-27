@@ -1,13 +1,15 @@
 const express = require('express')
 const app = express()
-const { serverSetup, getHulu, getAll, newHuluShow, deleteHuluById } = require('./controllers/hulu')
+const { getHulu, getAll, newHuluShow, deleteHuluById } = require('./controllers/hulu')
 const { getNetflix, newNetflixShow, deleteNetflixById } = require('./controllers/netflix')
 const { getStarz, newStarzShow, deleteStarzById } = require('./controllers/starz')
 
 app.set('view engine', 'pug')
 app.use(express.static('public'))
 
-app.get('/', serverSetup)
+app.get('/', (req, res) => {
+    return res.render('index')
+})
 app.use(express.json())
 
 app.get('/shows/netflix', getNetflix)
